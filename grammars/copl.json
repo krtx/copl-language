@@ -1,0 +1,40 @@
+{
+  "name": "CoPL",
+  "scopeName": "source.copl",
+  "fileTypes": [
+    "copl"
+  ],
+  "patterns": [
+    {
+      "match": "\\b(by|def)\\b",
+      "name": "keyword"
+    },
+    {
+      "begin": "\\(\\*",
+      "end": "\\*\\)",
+      "name": "comment.block"
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line"
+    },
+    {
+      "match": "\\$([evdwtskS]|env)[0-9_']?\\b",
+      "name": "variable.parameter"
+    },
+    {
+      "match":       "\\b(P-Zero|P-Succ|T-Zero|T-Succ|L-Succ|L-Trans|L-Zero|L-SuccSucc|L-SuccR|E-Const|E-Plus|E-Times|R-Plus|R-Times|R-PlusL|R-PlusR|R-TimesL|R-TimesR|DR-Plus|DR-Times|DR-PlusL|DR-PlusR|DR-TimesL|DR-TimesR|MR-Zero|MR-Multi|MR-One|E-Int|E-Bool|E-IfT|E-IfF|E-Minus|B-Plus|B-Minus|B-Times|B-Lt|E-PlusBoolL|E-PlusBoolR|E-PlusErrorL|E-PlusErrorR|E-MinusBoolL|E-MinusBoolR|E-MinusErrorL|E-MinusErrorR|E-TimesBoolL|E-TimesBoolR|E-TimesErrorL|E-TimesErrorR|E-IfInt|E-IfError|E-IfTError|E-IfFError|E-Var1|E-Var2|E-Let|E-Fun|E-App|E-LetRec|E-AppRec|Tr-Int|Tr-Bool|Tr-If|Tr-Plus|Tr-Minus|Tr-Times|Tr-Var1|Tr-Var2|Tr-Let|Tr-Fun|Tr-App|Tr-LetRec|E-Var|E-Nil|E-Cons|E-MatchNil|E-MatchCons|M-Var|M-Nil|M-Cons|M-Wild|NM-ConsNil|NM-NilCons|NM-ConsConsL|NM-ConsConsR|E-MatchM1|E-MatchM2|E-MatchN|T-Int|T-Bool|T-If|T-Plus|T-Minus|T-Times|T-Var|T-Let|T-Fun|T-App|T-LetRec|T-Nil|T-Cons|T-Match|T-Mult|T-Abs|E-BinOp|E-If|C-Ret|C-EvalR|C-Plus|C-Minus|C-Times|C-IfT|C-IfF|E-Match|E-LetCc|C-LetBody|C-EvalArg|C-EvalFun|C-EvalFunR|C-EvalFunC|C-EvalConsR|C-Cons|C-MatchNil|C-MatchCons|E-Mult|E-Ref|E-Deref|E-Assign|B-Mult|A-Const|A-Var|A-Plus|A-Minus|A-Times|B-Const|B-Not|B-And|B-Or|B-Eq|C-Skip|C-Assign|C-Seq|C-WhileT|C-WhileF)\\b",
+      "name" : "constant.language"
+    },
+    {
+      "match": "\\b(evalto|is\\s+not\\s+less\\s+than|is\\s+less\\s+than|is)\\b",
+      "name": "entity.name.function"
+    },
+    {
+      "match": "\\|-", "name": "entity.name.function"
+    },
+    {
+      "match": "--->|-\\*->|-d->|>>|=>", "name": "entity.name.function"
+    }
+  ]
+}
